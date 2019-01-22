@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi pagina</title>
+	<style>
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="titulo">Mi pagina de pruebas</h1>
+	<form>
+		<label>Username:
+			<input type="text" name="username" value="santi"autofocus>
+		</label>
+		<label>Email:</label>
+		<button type="button" class="btn">Enviar</button>
+	</form>
+	
+	<a href="#">Google</a>
+	<nav>
+		<a href="#">Netflix</a>
+		<a class="boton-molon" href="#">Mi Netflix</a>
+	</nav>
+	<div>
+		<button class="boton-molon" href="#">Ir a Netflix</button>
+	</div>
+	
+	<select id="coches">
+		<option value="t">Tesla</option>
+		<option value="b">BMW</option>
+		<option value="a">Audi</option>
+	</select>
+	
+	<select id="colores" multiple>
+		<option value="n">Naranja</option>
+		<option value="v">Verde</option>
+		<option value="b">Blanco</option>
+	</select>
+	
+	<div id="radios">
+		<input type="radio" name="cine" id="si" value="y">Si
+		<input type="radio" name="cine" id="no" value="n">No	
+	</div>
+	
+	<div>
+		<input type="number" id="num1">
+		<input type="number" id="num2">
+		<button type="button" id="suma" onclick="sumar();">Calcular</button>
+		<input type="number" id="resultado">
+	</div>
+	
+
+</body>
+<script>
+	function saludar(){
+			alert("Hola a todos");
+	}
+	
+	var btn= document.createElement("button");
+	btn.setAttribute("type","button");
+	btn.setAttribute("id","btn1");
+	btn.textContent="Pulsa aquí";	
+	setTimeout(()=>{
+		document.body.appendChild(btn);
+	},3000);
+	
+	function sumar(){
+		let n1=document.getElementById("num1").value;
+		let n2=document.getElementById("num2").value;
+		let suma = parseInt(n1) + parseInt(n2);
+		document.getElementById("resultado").value=suma;
+		
+	}
+</script>
+</html>

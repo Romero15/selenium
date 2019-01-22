@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Grid" parallel="tests">
+<!-- Definimos que test queremos ejecutar y que parametros en este caso el browser  -->
+	<test name="Test Grid Firefox">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="GridParalelo" />
+		</classes>
+	</test>
+	<test name="Test Grid Chrome">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="GridParalelo" />
+		</classes>
+	</test>
+
+</suite>
